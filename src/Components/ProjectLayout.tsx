@@ -1,5 +1,14 @@
+import React from "react";
 
-function ProjectLayout({img, title, content, link, type}) {
+interface ProjectLayoutProps {
+  img: string;
+  title: string;
+  content: string;
+  link: string;
+  type: string;
+}
+
+const ProjectLayout: React.FC<ProjectLayoutProps> = ({img, title, content, link, type}) => {
   return (
     <div className='project-grid'>
         <div className='project-grid-img'>
@@ -18,5 +27,4 @@ function ProjectLayout({img, title, content, link, type}) {
     </div>
   )
 }
-
 export default ProjectLayout

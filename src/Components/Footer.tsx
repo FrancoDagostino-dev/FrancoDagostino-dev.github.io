@@ -12,7 +12,9 @@ const Footer: React.FC = () => {
     if (form.current) {
       emailjs.sendForm('service_a6axb0b', 'template_i5nph4j', form.current, 'uQbOY4o5E9hsSzxAL')
         .then((result) => {
-          alert('Sent');
+          if(result){
+            alert('Sent');
+          } 
         }, (error) => {
           console.log(error.text);
         });
